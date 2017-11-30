@@ -168,7 +168,7 @@
 										<!--<h5 class="blog-title">Booking Lab</h5>-->
 									</div>
 									<div class="blog-body">
-										<form action="bookingLab" id="bookingForm" method="post">
+										<form action="bookinglab" id="bookingForm" method="post">
 											<div class="form-group">
 												<div class="row">
 													<div class="col-md-8">
