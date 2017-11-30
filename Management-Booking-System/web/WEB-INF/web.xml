@@ -37,16 +37,52 @@
         <servlet-class>servlet.viewlistSP</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>FormBookingLab</servlet-name>
-        <servlet-class>servlet.FormBookingLab</servlet-class>
+        <servlet-name>bookingLab</servlet-name>
+        <servlet-class>servlet.bookingLab</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>FormBookingRoom</servlet-name>
-        <servlet-class>servlet.FormBookingRoom</servlet-class>
+        <servlet-name>bookingServlet</servlet-name>
+        <servlet-class>servlet.bookingRoomServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>EditLecturer</servlet-name>
-        <servlet-class>servlet.EditLecturer</servlet-class>
+        <servlet-name>bookingLabServlet</servlet-name>
+        <servlet-class>servlet.bookingLabServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>formbookingroom</servlet-name>
+        <servlet-class>servlet.formbookingroom</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>bookingRoomServlet</servlet-name>
+        <servlet-class>servlet.bookingRoomServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>formbookinglab</servlet-name>
+        <servlet-class>servlet.formbookinglab</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editlect</servlet-name>
+        <servlet-class>servlet.editlect</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>profilelect</servlet-name>
+        <servlet-class>servlet.profilelect</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>viewlistbooking</servlet-name>
+        <servlet-class>servlet.viewlistbooking</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>admin</servlet-name>
+        <servlet-class>servlet.admin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>yana</servlet-name>
+        <servlet-class>servlet.yana</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>bookingRoom</servlet-name>
+        <servlet-class>servlet.bookingRoom</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>loginservlet</servlet-name>
@@ -85,16 +121,52 @@
         <url-pattern>/viewlistSP</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>FormBookingLab</servlet-name>
-        <url-pattern>/FormBookingLab</url-pattern>
+        <servlet-name>bookingLab</servlet-name>
+        <url-pattern>/bookingLab</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>FormBookingRoom</servlet-name>
-        <url-pattern>/FormBookingRoom</url-pattern>
+        <servlet-name>bookingServlet</servlet-name>
+        <url-pattern>/bookingServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>EditLecturer</servlet-name>
-        <url-pattern>/EditLecturer</url-pattern>
+        <servlet-name>bookingLabServlet</servlet-name>
+        <url-pattern>/bookingLabServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>formbookingroom</servlet-name>
+        <url-pattern>/formbookingroom</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>bookingRoomServlet</servlet-name>
+        <url-pattern>/bookingRoomServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>formbookinglab</servlet-name>
+        <url-pattern>/formbookinglab</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editlect</servlet-name>
+        <url-pattern>/editlect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>profilelect</servlet-name>
+        <url-pattern>/profilelect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewlistbooking</servlet-name>
+        <url-pattern>/viewlistbooking</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>admin</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>yana</servlet-name>
+        <url-pattern>/yana</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>bookingRoom</servlet-name>
+        <url-pattern>/bookingRoom</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
