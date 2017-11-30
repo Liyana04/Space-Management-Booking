@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author nur liyana
  */
-public class EditLecturer extends HttpServlet {
+public class editlect extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

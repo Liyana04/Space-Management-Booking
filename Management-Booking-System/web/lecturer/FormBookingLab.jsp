@@ -108,19 +108,19 @@
 						</a>
 						<ul style="display: block">
 							<li>
-								<a href='FormBookingRoom'>
+								<a href='formbookingroom'>
 									<span>Room</span>
 								</a>
 							</li>
 							<li>
-								<a href='FormBookingLab' class="select">
+								<a href='formbookinglab' class="select">
 									<span>Lab</span>
 								</a>
 							</li>
                                                 </ul>
                                         </li>
                                         <li>
-						<a href='EditLecturer'>
+						<a href='editlect'>
 							<i class="fa fa-edit"></i>
 							<span>Edit Profile</span>
 						</a>
@@ -168,7 +168,7 @@
 										<!--<h5 class="blog-title">Booking Lab</h5>-->
 									</div>
 									<div class="blog-body">
-										<form action="bookinglab" id="bookingForm" method="post">
+										<form action="bookingLab" id="bookingForm" method="post">
 											<div class="form-group">
 												<div class="row">
 													<div class="col-md-8">

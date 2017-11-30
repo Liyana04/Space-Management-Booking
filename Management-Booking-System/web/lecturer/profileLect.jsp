@@ -116,12 +116,12 @@
 						</a>
 						<ul>
 							<li>
-								<a href='FormBookingRoom'><!--before this invoice.html-->
+								<a href='formbookingroom'><!--before this invoice.html-->
 									<span>Room</span><!--invoice-->
 								</a>
 							</li>
 							<li>
-								<a href='FormBookingLab'><!--before profile.html-->
+								<a href='formbookinglab'><!--before profile.html-->
 									<span>Lab</span><!--before is profile-->
 								</a>
 							</li>
@@ -129,7 +129,7 @@
 						</ul>
 					</li>
                                         <li>
-						<a href='EditLecturer'>
+						<a href='editlect'>
 							<i class="fa fa-edit"></i>
 							<span>Edit Profile</span>
 						</a>

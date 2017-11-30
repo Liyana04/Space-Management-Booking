@@ -16,66 +16,85 @@ public class booking {
     private int booking_id;
     private String StartDate;
     private String EndDate;
+    private String StartTime;
+    private String EndTime;
     private String Status;
-    private String book;
+    private String booking;
     private String purpose;
-    private String lectBook;
-
-    public int getBooking_id() {
-        return booking_id;
-    }
+    private String name;
 
     public void setBooking_id(int booking_id) {
         this.booking_id = booking_id;
-    }
-
-    public String getStartDate() {
-        return StartDate;
     }
 
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
-    public String getEndDate() {
-        return EndDate;
-    }
-
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
     }
 
-    public String getStatus() {
-        return Status;
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
     }
 
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
-    public String getBook() {
-        return book;
-    }
-
-    public void setBook(String book) {
-        this.book = book;
-    }
-
-    public String getPurpose() {
-        return purpose;
+    public void setBook(String booking) {
+        this.booking = booking;
     }
 
     public void setPurpose(String purpose) {
         this.purpose = purpose;
     }
 
-    public String getLectBook() {
-        return lectBook;
+    public void setName(String username) {
+        this.name = name;
     }
 
-    public void setLectBook(String lectBook) {
-        this.lectBook = lectBook;
+    public int getBooking_id() {
+        return booking_id;
     }
-    
+
+    public String getStartDate() {
+        return StartDate;
+    }
+
+    public String getEndDate() {
+        return EndDate;
+    }
+
+    public String getStartTime() {
+        return StartTime;
+    }
+
+    public String getEndTime() {
+        return EndTime;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public String getBook() {
+        return booking;
+    }
+
+    public String getPurpose() {
+        return purpose;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+  
     
 }

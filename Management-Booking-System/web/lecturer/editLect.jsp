@@ -113,19 +113,19 @@
 						</a>
 						<ul>
 							<li>
-								<a href='FormBookingRoom'>
+								<a href='formbookingroom'>
 									<span>Room</span>
 								</a>
 							</li>
 							<li>
-								<a href='FormBookingLab'>
+								<a href='formbookinglab'>
 									<span>Lab</span>
 								</a>
 							</li>
                                                 </ul>
                                         </li>
                                         <li class="highlight">
-						<a href='EditLecturer' >
+						<a href='editlect' >
 							<i class="fa fa-edit"></i>
 							<span>Edit Profile</span>
                                                         <span class="current-page"></span>
