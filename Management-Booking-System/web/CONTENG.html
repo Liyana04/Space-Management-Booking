@@ -1,0 +1,352 @@
+<%-- 
+    Document   : adminHomePage
+    Created on : 20-Nov-2017, 12:02:18
+    Author     : user
+--%>
+admin home page
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Hello</h1>
+       
+    <li><a href="lecturer">lecturer</a>
+    <li><a href="SpaceManager">space manager</a>
+    </body>
+</html>
+
+
+
+<%-- 
+    Document   : adminVL
+    Created on : 20-Nov-2017, 12:07:24
+    Author     : user
+--%>
+view lecturer
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+            <li><a href="adduser?position=lecturer">ADD LECTURER</a>
+          <li><a href="viewlistLecturer">List lecturer</a>
+              <li><a href="historylogin?position=lecturer">history login</a>
+    </body>
+</html>
+
+
+
+<%-- 
+    Document   : adminVSP
+    Created on : 20-Nov-2017, 12:04:31
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+      <li><a href="adduser?position=spacemanager">ADD SPACE MANAGER</a>
+          <li><a href="viewlistSP?position=spacemanager">List Space Manager</a>
+              <li><a href="historylogin?position=spacemanager">ADD SPACE MANAGER</a>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+<%-- 
+    Document   : adduser
+    Created on : 20-Nov-2017, 12:52:18
+    Author     : user
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+       
+          <%  String userID = (String)session.getAttribute("position"); %>
+          <%
+              if(userID.equals("lecturer"))
+              {
+                  %>
+                  <h1>Form for <%= userID %></h1> 
+                  <%
+              }
+               else
+                {
+%>
+                  <h1>Form for <%= userID %></h1> 
+                  <%
+                }
+              %>
+               <form method="post" action="adduser">
+              <table border="2" width="4" cellspacing="2">
+                      <tr>
+                          <td>NAME:</td>
+                          <td><input type="text" name="nama" value="" /></td>
+                      </tr>
+                      <tr>
+                          <td>PHONE NUMBER</td>
+                          <td><input type="text" name="phonenumber" value="" /></td>
+                      </tr>
+                      <tr>
+                          <td>EMAIL</td>
+                          <td><input type="text" name="email" value="" /></td>
+                      </tr>
+                      <tr>
+                          <td>POSITION</td>
+                          <td><input type="text" name="position" value=<%= userID %> disabled="disabled" /></td>
+                      </tr>
+                      <tr>
+                          <td>IDENTIFICATION NUMBER</td>
+                          <td><input type="text" name="icnumber" value="" /></td>
+                      </tr>
+                      <tr>
+                          <td>STAFF NUMBER</td>
+                          <td><input type="text" name="staffno" value="" /></td>
+                      </tr>
+                      <tr>
+                          <td>USERNAME</td>
+                          <td><input type="text" name="username" value="" /></td>
+                      </tr>
+                      <tr>
+                          <td>PASSWORD</td>
+                          <td><input type="text" name="password" value="" /></td>
+                      </tr>
+                      
+                      
+                   
+              </table>
+                 <input type="submit" value="SUBMIT" />
+        </form>
+    </body>
+</html>
+
+
+
+
+
+package servlet;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class bookingRoom extends HttpServlet {
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet adduser</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet adduser at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+         
+        }
+        
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        response.setContentType("text/html;charset=UTF-8");
+        try (
+               
+                PrintWriter out=response.getWriter();){
+    
+                Class.forName("com.mysql.jdbc.Driver"); 
+               
+
+         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectdatabase?useSSL=false", "root", "1234");
+
+         PreparedStatement stmtt=conn.prepareStatement("insert into booking (StartDate,EndDate,StartTime,EndTime,Status,book,purpose,lectBook) values(?,?,?,?,?,?,?,?)");
+        
+         
+        stmtt.setString(1,request.getParameter("Sdate"));
+        stmtt.setString(3,request.getParameter("Stime"));
+        stmtt.setString(2,request.getParameter("Edate"));
+        stmtt.setString(4,request.getParameter("Etime"));
+        stmtt.setString(5,"pending");
+        stmtt.setString(7,request.getParameter("purpose"));
+        stmtt.setString(6,request.getParameter("book"));
+        stmtt.setString(8,"shafri");
+        stmtt.executeUpdate(); 
+        
+         RequestDispatcher dispatcher //
+                = this.getServletContext().getRequestDispatcher("/lecturer/profileLect.jsp");
+ 
+        
+          
+
+ 
+      } catch(Exception ex) {
+         ex.printStackTrace();
+      }
+      
+
+            
+    }
+
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }
+
+   
+}
+
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ *
+ * @author nur liyana
+ */
+public class editlect extends HttpServlet {
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet formbookingroom</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet formbookingroom at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+            RequestDispatcher dispatcher //
+                = this.getServletContext().getRequestDispatcher("/lecturer/editLect.jsp");
+ 
+        dispatcher.forward(request, response);
+            
+        }
+    }
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}
