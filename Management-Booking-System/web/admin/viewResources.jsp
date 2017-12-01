@@ -1,6 +1,6 @@
 <%-- 
-    Document   : adminHomePage
-    Created on : 20-Nov-2017, 12:02:18
+    Document   : adminVL
+    Created on : 20-Nov-2017, 12:07:24
     Author     : user
 --%>
 
@@ -12,10 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello</h1>
-       
-    <li><a href="lecturer">lecturer</a>
-    <li><a href="SpaceManager">space manager</a>
-    <li><a href="adminResources">Resources</a>
+            <li><a href="addResources">ADD RESOURCES</a>
+          <li><a href="viewListResources">LIST RESOURCES</a>
     </body>
 </html>
