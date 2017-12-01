@@ -5,7 +5,7 @@
  */
 package servlet;
 
-import bean.booking;
+import bean.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -69,9 +69,10 @@ public class viewlistbooking extends HttpServlet {
             String Status = rs.getString("Status");
             String booking = rs.getString("booking");
             String purpose = rs.getString("purpose");
-            String lectBook = rs.getString("username");
+            String Username = rs.getString("Username");
             
              booking books= new booking();
+             lecturer lect = new lecturer();
              books.setBooking_id(booking_id);
              books.setStartDate(StartDate);
              books.setEndDate(EndDate);
@@ -80,7 +81,7 @@ public class viewlistbooking extends HttpServlet {
              books.setStatus(Status);
              books.setBook(booking);
              books.setPurpose(purpose);
-             books.setUsername(username);
+             lect.setUsername(Username);
              }
          }
         

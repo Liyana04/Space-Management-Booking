@@ -13,5 +13,5 @@ body {
 	font-size: 120px;
 	font-weight: 900;
 	margin-bottom: 0;
-	color: darken($white, 15%);
+	color: darken(white, 15%);
 }
