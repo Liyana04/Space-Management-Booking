@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import utils.EmailUtility;
  
+
 /**
  * A servlet that takes message details from user and send it as a new e-mail
  * through an SMTP server.
